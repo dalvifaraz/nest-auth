@@ -22,5 +22,9 @@ export class AppService {
   async findOne(email: any): Promise<User | null> {
     return this.userRepository.findOne({ where: { email }});
   }
+
+  async findOneById(id: number): Promise<User | null> {
+    return this.userRepository.findOne({ where: { id }});
+  }
 }
  
