@@ -18,5 +18,9 @@ export class AppService {
   async create(data: any): Promise<User>{
     return this.userRepository.save(data);
   }
+
+  async findOne(email: any): Promise<User | null> {
+    return this.userRepository.findOne({ where: { email }});
+  }
 }
  
